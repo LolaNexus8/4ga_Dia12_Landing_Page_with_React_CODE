@@ -1,24 +1,33 @@
 import React from "react";
+import PropTypes from "prop-types";
+
 export function Card(props) {
 	return (
-		<div className="d-flex justify-content-center">
-			<div className="card">
-				<img
-					src="https://picsum.photos/500/350"
-					className="card-img-top"
-					alt="imagenes Random"
-				/>
-				<div className="card-body">
-					<h5 className="card-title">Card title</h5>
-					<p className="card-text">
-						Some quick example text to build on the card title and
-						make up the bulk of the card&apos;s content.
-					</p>
-					<a href="#" className="btn btn-primary">
-						Go somewhere
-					</a>
-				</div>
+		<div className="card text-center">
+			<img
+				src={props.urlImg}
+				className="card-img-top"
+				alt="Imagenes random."
+			/>
+			<div className="card-body">
+				<h5 className="card-title">{props.title}</h5>
+				<p className="card-text">{props.textCard}</p>
+			</div>
+			<div className="card-footer">
+				<a
+					// target="_blank"
+					href={props.buttonCard}
+					className="btn btn-primary">
+					{props.textButtonCard}
+				</a>
 			</div>
 		</div>
 	);
 }
+Card.propTypes = {
+	urlImg: PropTypes.string,
+	title: PropTypes.string,
+	textCard: PropTypes.string,
+	buttonCard: PropTypes.string,
+	textButtonCard: PropTypes.string
+};

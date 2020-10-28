@@ -4,8 +4,11 @@ export function Navbar(props) {
 	return (
 		<nav className="navbar navbar-expand-lg navbar-dark bg-dark p-3">
 			<div className="container">
-				<a className="navbar-brand" href="#">
-					Logo Lola
+				<a
+					className="navbar-brand"
+					// target="_blank"
+					href="https://getbootstrap.com/ ">
+					Start Bootstrap
 				</a>
 				<button
 					className="navbar-toggler"
